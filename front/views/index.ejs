@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+ <head>
+  <meta charset="utf-8">
+  <title>Reports</title>
+  <style>
+   .item {
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 580px
+   }
+   .details {
+    display: table-cell;
+    vertical-align: top;
+    text-align: left;
+    width: 250px;
+    min-width: 250px;
+    margin: 10px 10px;
+   }
+  .action {
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 70px;
+    display: block; 
+    margin: 5px;
+    vertical-align: middle;
+   }
+  </style>
+ </head>
+ <body>
+  <h1>Reports</h1>
+        <div class="item">
+          <div class="details">
+            <h3>Id: </h3>
+            <h3>State: </h3>
+            <h3>
+              <a href="http://www.google.com">Details</a>
+            </h3>
+          </div>
+          <div class="details">
+            <h3>Type: </h3>
+            <h3>Message: </h3>
+          </div>
+          <div class="details">
+           <button class="action">Block</button>
+           <button class="action">Resolve</button>
+         </div>
+       </div>
+</body>
 </html>
