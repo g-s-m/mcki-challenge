@@ -30,22 +30,24 @@
  </head>
  <body>
   <h1>Reports</h1>
+    <% for (var i = 0; i < newListItems.length; i++) { %>
         <div class="item">
           <div class="details">
-            <h3>Id: </h3>
-            <h3>State: </h3>
+            <h3>Id: <%= newListItems[i].messageId.split('-')[4] %></h3>
+            <h3>State: <%= newListItems[i].messageState %></h3>
             <h3>
               <a href="http://www.google.com">Details</a>
             </h3>
           </div>
           <div class="details">
-            <h3>Type: </h3>
-            <h3>Message: </h3>
+            <h3>Type: <%= newListItems[i].messageType %></h3>
+            <h3>Message: <%= newListItems[i].messageText %></h3>
           </div>
           <div class="details">
            <button class="action">Block</button>
            <button class="action">Resolve</button>
          </div>
        </div>
+    <% } %>
 </body>
 </html>
