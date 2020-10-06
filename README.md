@@ -17,23 +17,23 @@ This solution based on the next assumptions not to complicate the task
 
 # How to run locally
 
-## 1. Build frontend following [instruction](https://github.com/g-s-m/mcki-challenge/blob/main/front/README.md)
+1. Build frontend following [instruction](https://github.com/g-s-m/mcki-challenge/blob/main/front/README.md)
 
-## 2. Build backend following [instruction](https://github.com/g-s-m/mcki-challenge/blob/main/back/README.md)
+2. Build backend following [instruction](https://github.com/g-s-m/mcki-challenge/blob/main/back/README.md)
 
-## 3. Run backend container using the following command
+3. Run backend container using the following command
 ```bash 
 $ docker run --net=host -d --env BA_HTTP_PORT=3000 --name mcki-back mcki-back:1.0
 ```
 
-## 4. Run frontend container using the following command
+4. Run frontend container using the following command
 ```bash
 $ docker run -d -ti --net host --env PORT=8080 --env BACKEND_ADDR=localhost --env BACKEND_PORT=3000 --name mcki-front mcki:1.0
 ```
 
-## 5. Open the page http://localhost:8080 in your browser
+5. Open the page http://localhost:8080 in your browser
 
-## 6. Stop containers
+6. Stop containers
 ```
 $ docker container stop mcki-back
 $ docker container stop mcki-front
