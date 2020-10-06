@@ -27,6 +27,7 @@
     vertical-align: middle;
    }
   </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
  </head>
  <body>
   <h1>Reports</h1>
@@ -44,9 +45,28 @@
             <h3>Message: <%= newListItems[i].messageText %></h3>
           </div>
           <div class="details">
-           <button class="action">Block</button>
-           <button class="action">Resolve</button>
-         </div>
+           <button class="action" value="blocked" type="button" id="blocked_<%=newListItems[i].messageId%>">Block</button>
+            <script type"text/javascript">
+              $('#blocked_<%=newListItems[i].messageId%>').click( function() {
+                y = $(document).scrollTop()
+                $.post( "block/<%=newListItems[i].messageId%>", function (data) {
+                  location.reload();
+                  $('html, body').scrollTop(y);
+                });
+              });
+            </script>
+           <button class="action" value="resolved" type="button" id="resolve_<%=newListItems[i].messageId%>">Resolve</button>
+            <script type"text/javascript">
+              $('#resolve_<%=newListItems[i].messageId%>').click( function() {
+                y = $(document).scrollTop()
+                $.post( "resolve/<%=newListItems[i].messageId%>", function (data) {
+                  location.reload();
+                  $('html, body').scrollTop(y);
+                });
+              });
+            </script>
+ 
+          </div>
        </div>
     <% } %>
 </body>
