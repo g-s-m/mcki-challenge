@@ -2,13 +2,14 @@
 
 ## How to run
 
-- Install node.js and npm
-- Install dependencies
+- Install docker
+- Build docker image
 ```
-npm install
+$ docker build -t mcki:1.0 .
 ```
-- Run
+- Run frontend locally
 ```
-npm start
+$ docker run -ti -p 127.0.0.1:3000:3000/tcp mcki:1.0
 ```
+- Open the page http://localhost:3000 in your browser
 
