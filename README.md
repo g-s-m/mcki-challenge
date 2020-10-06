@@ -23,7 +23,7 @@ This solution based on the next assumptions not to complicate the task
 
 3. Run backend container using the following command
 ```bash 
-$ docker run --net=host -d --env BA_HTTP_PORT=3000 --name mcki-back mcki-back:1.0
+$ docker run --net=host -d --env BACK_HTTP_PORT=3000 --name mcki-back mcki-back:1.0
 ```
 
 4. Run frontend container using the following command
