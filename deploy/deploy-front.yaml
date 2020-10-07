@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcki-front
+  labels:
+    app: mcki
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcki
+  template:
+    metadata:
+      labels:
+        app: mcki
+    spec:
+      containers:
+      - name: mcki-front
+        image: sgomenyuk/mcki-front:1.0
+        resources:
+          limits:
+            cpu: "0.05"
+          requests:
+            cpu: "0.05"
+        env:
+        - name: PORT
+          value: "8080"
+        - name: BACKEND_ADDR
+          value: 35.247.67.242
+        - name: BACKEND_PORT
+          value: "30500"

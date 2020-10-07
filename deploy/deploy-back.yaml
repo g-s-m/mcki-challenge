@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcki-back
+  labels:
+    app: mcki
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcki
+  template:
+    metadata:
+      labels:
+        app: mcki
+    spec:
+      containers:
+      - name: mcki-back
+        image: sgomenyuk/mcki-back:1.0
+        resources:
+          limits:
+            cpu: "0.05"
+          requests:
+            cpu: "0.05"
+        env:
+        - name: BACK_HTTP_PORT
+          value: "3000" 
