@@ -15,6 +15,11 @@ This solution based on the next assumptions not to complicate the task
 └── README.md
 ```
 
+#Try this solution
+This solution has been deployed in k8s cluster
+Go to http://159.122.178.101:30500/
+To return to initial state of reports go to http://159.122.178.101:30500/reload
+
 # How to run locally
 
 1. Build frontend following [instruction](https://github.com/g-s-m/mcki-challenge/blob/main/front/README.md)

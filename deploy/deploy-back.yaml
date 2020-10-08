@@ -3,25 +3,43 @@ kind: Deployment
 metadata:
   name: mcki-back
   labels:
-    app: mcki
+    app: mcki-b
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mcki
+      app: mcki-b
   template:
     metadata:
       labels:
-        app: mcki
+        app: mcki-b
     spec:
       containers:
       - name: mcki-back
         image: sgomenyuk/mcki-back:1.0
         resources:
           limits:
-            cpu: "0.05"
+            cpu: "0.1"
           requests:
-            cpu: "0.05"
+            cpu: "0.1"
         env:
         - name: BACK_HTTP_PORT
           value: "3000" 
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mcki-back
+  labels:
+    app: mcki-b
+spec:
+  selector: 
+    app: mcki-b
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
+  clusterIP: 172.21.0.2
