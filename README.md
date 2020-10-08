@@ -33,7 +33,7 @@ $ docker run --net=host -d --env BACK_HTTP_PORT=3000 --name mcki-back mcki-back:
 
 4. Run frontend container using the following command
 ```bash
-$ docker run -d -ti --net host --env PORT=8080 --env BACKEND_ADDR=localhost --env BACKEND_PORT=3000 --name mcki-front mcki:1.0
+$ docker run --net host -d --env PORT=8080 --env BACKEND_ADDR=localhost --env BACKEND_PORT=3000 --name mcki-front mcki:1.0
 ```
 
 5. Open the page http://localhost:8080 in your browser
