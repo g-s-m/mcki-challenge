@@ -16,7 +16,7 @@ This solution based on the next assumptions not to complicate the task
 ```
 
 # Try this solution
-This solution has been deployed in k8s cluster
+This solution has been deployed in k8s cluster.  
 Go to http://159.122.178.101:30500/  
 To return to initial state of reports go to http://159.122.178.101:30500/reload
 
