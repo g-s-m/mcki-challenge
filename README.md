@@ -1,5 +1,5 @@
 # mcki-challenge
-[McKinsey full stack app challenge](https://github.com/morkro/coding-challenge)
+[Full stack app challenge](https://github.com/morkro/coding-challenge)
 
 # Assumptions
 This solution based on the next assumptions not to complicate the task 
